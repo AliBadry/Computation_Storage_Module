@@ -1,0 +1,1158 @@
+
+*** Running vivado
+    with args -log Computational_storage.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Computational_storage.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Computational_storage.tcl -notrace
+Command: link_design -top Computational_storage -part xczu7ev-ffvc1156-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/constrs_1/imports/new/timing.xdc]
+Finished Parsing XDC File [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/constrs_1/imports/new/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 24 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 16 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 8 instances
+
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 1530.453 ; gain = 1198.910
+Command: opt_design -verbose -directive ExploreSequentialArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreSequentialArea
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1530.453 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 8c0792fd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1637.598 ; gain = 107.145
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-442] LUT Reduction optimized 0 LUTs
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell DQ_IOBUF[7]_inst_i_1 driving pin DQ_IOBUF[7]_inst_i_2/O of DQ_IOBUF[7]_inst_i_2.
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin CU1/FSM_onehot_current_state_reg[1]/CLR of CU1/FSM_onehot_current_state_reg[1].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin CU1/FSM_onehot_current_state_reg[2]/CLR of CU1/FSM_onehot_current_state_reg[2].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin CU1/FSM_onehot_current_state_reg[3]/CLR of CU1/FSM_onehot_current_state_reg[3].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin CU1/FSM_onehot_current_state_reg[4]/CLR of CU1/FSM_onehot_current_state_reg[4].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin CU1/FSM_onehot_current_state_reg[5]/CLR of CU1/FSM_onehot_current_state_reg[5].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin CU1/FSM_onehot_current_state_reg[6]/CLR of CU1/FSM_onehot_current_state_reg[6].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin CU1/FSM_onehot_current_state_reg[0]/PRE of CU1/FSM_onehot_current_state_reg[0].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[0]/CLR of RAM1/out_port1_reg[0].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[1]/CLR of RAM1/out_port1_reg[1].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[2]/CLR of RAM1/out_port1_reg[2].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[3]/CLR of RAM1/out_port1_reg[3].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[4]/CLR of RAM1/out_port1_reg[4].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[5]/CLR of RAM1/out_port1_reg[5].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[6]/CLR of RAM1/out_port1_reg[6].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port1_reg[7]/CLR of RAM1/out_port1_reg[7].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[0]/CLR of RAM1/out_port2_reg[0].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[1]/CLR of RAM1/out_port2_reg[1].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[2]/CLR of RAM1/out_port2_reg[2].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[3]/CLR of RAM1/out_port2_reg[3].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[4]/CLR of RAM1/out_port2_reg[4].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[5]/CLR of RAM1/out_port2_reg[5].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[6]/CLR of RAM1/out_port2_reg[6].
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell RAM1/FSM_onehot_current_state[6]_i_1 driving pin RAM1/out_port2_reg[7]/CLR of RAM1/out_port2_reg[7].
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 23 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 16509008f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1637.598 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-442] LUT Reduction optimized 0 LUTs
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 16509008f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1637.598 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 16509008f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1637.598 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 16509008f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1637.598 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 16509008f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1637.598 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Constant propagation
+INFO: [Opt 31-442] LUT Reduction optimized 0 LUTs
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 6 Constant propagation | Checksum: 16509008f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1637.598 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 7 Sweep
+Phase 7 Sweep | Checksum: 16509008f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1637.598 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT1 CU1/Controller_LUT1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT1 CU1/Controller_LUT1_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT1 CU1/Controller_LUT1_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT1 CU1/Controller_LUT1_3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT1 CU1/Controller_LUT1_4.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT1 CU1/Controller_LUT1_5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT2 CU1/Controller_LUT2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT2 CU1/Controller_LUT2_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT2 CU1/Controller_LUT2_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_10.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_100.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_101.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_102.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_103.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_104.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_105.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_106.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_107.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_108.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_109.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_11.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_110.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_111.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_112.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_113.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_114.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_115.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_116.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_117.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_118.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_119.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_12.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_120.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_121.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_122.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_123.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_124.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_125.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_126.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_127.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_128.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_13.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_14.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_15.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_16.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_17.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_18.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_19.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_20.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_21.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_22.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_23.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_24.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_25.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_26.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_27.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_28.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_29.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_30.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_31.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_32.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_33.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_34.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_35.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_36.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_37.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_38.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_39.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_4.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_40.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_41.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_42.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_43.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_44.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_45.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_46.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_47.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_48.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_49.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_50.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_51.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_52.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_53.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_54.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_55.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_56.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_57.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_58.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_59.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_6.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_60.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_61.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_62.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_63.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_64.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_65.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_66.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_67.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_68.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_69.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_7.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_70.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_71.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_72.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_73.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_74.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_75.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_76.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_77.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_78.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_79.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_8.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_80.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_81.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_82.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_83.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_84.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_85.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_86.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_87.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_88.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_89.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_9.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_90.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_91.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_92.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_93.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_94.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_95.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_96.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_97.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_98.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 CU1/Controller_LUT3_99.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_10.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_11.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_12.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_13.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_14.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_15.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_4.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_6.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_7.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_8.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT4 CU1/Controller_LUT4_9.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5_3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5_4.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5_5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5_6.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 CU1/Controller_LUT5_7.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6_3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6_4.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6_5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6_6.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 CU1/Controller_LUT6_7.
+INFO: [Opt 31-96] Resynthesis adds cell: VCC CU1/Controller_VCC.
+INFO: [Opt 31-96] Resynthesis adds cell: GND RAM1/Dual_port_RAM_GND.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT2 RAM1/Dual_port_RAM_LUT2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT2 RAM1/Dual_port_RAM_LUT2_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT2 RAM1/Dual_port_RAM_LUT2_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT2 RAM1/Dual_port_RAM_LUT2_3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT3 RAM1/Dual_port_RAM_LUT3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 RAM1/Dual_port_RAM_LUT5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT5 RAM1/Dual_port_RAM_LUT5_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_1.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_10.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_11.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_12.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_13.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_14.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_15.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_16.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_17.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_18.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_19.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_2.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_20.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_21.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_22.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_23.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_24.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_25.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_26.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_27.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_28.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_29.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_3.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_30.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_31.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_32.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_33.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_34.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_35.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_36.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_37.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_38.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_39.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_4.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_40.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_41.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_42.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_43.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_44.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_45.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_46.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_47.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_48.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_49.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_5.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_50.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_51.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_52.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_53.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_54.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_55.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_56.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_57.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_58.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_59.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_6.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_60.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_61.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_62.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_63.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_64.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_65.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_66.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_67.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_68.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_69.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_7.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_70.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_71.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_72.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_73.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_8.
+INFO: [Opt 31-96] Resynthesis adds cell: LUT6 RAM1/Dual_port_RAM_LUT6_9.
+INFO: [Opt 31-74] Optimized 2 modules.
+INFO: [Opt 31-75] Optimized module 'Controller'.
+INFO: [Opt 31-75] Optimized module 'Dual_port_RAM'.
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell CU1/Controller_LUT1 driving pin CU1/Controller_LUT5_2/O of CU1/Controller_LUT5_2.
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell CU1/Controller_LUT1_1 driving pin CU1/Controller_LUT5_3/O of CU1/Controller_LUT5_3.
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell CU1/Controller_LUT1_2 driving pin CU1/Controller_LUT5/O of CU1/Controller_LUT5.
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell CU1/Controller_LUT1_3 driving pin CU1/Controller_LUT5_1/O of CU1/Controller_LUT5_1.
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell CU1/Controller_LUT1_4 driving pin CU1/Controller_LUT3/O of CU1/Controller_LUT3.
+INFO: [Opt 31-47] Cell absorbed into downstream logic: LUT1 cell CU1/Controller_LUT1_5 driving pin CU1/Controller_LUT2/O of CU1/Controller_LUT2.
+INFO: [Opt 31-94] Delete cell: LUT1 CU1/Controller_LUT1.
+INFO: [Opt 31-94] Delete cell: LUT1 CU1/Controller_LUT1_1.
+INFO: [Opt 31-94] Delete cell: LUT1 CU1/Controller_LUT1_2.
+INFO: [Opt 31-94] Delete cell: LUT1 CU1/Controller_LUT1_3.
+INFO: [Opt 31-94] Delete cell: LUT1 CU1/Controller_LUT1_4.
+INFO: [Opt 31-94] Delete cell: LUT1 CU1/Controller_LUT1_5.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-131] Removed net: CU1/RAM[0][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[10][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[11][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[12][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[13][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[14][3]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[14][3]_i_4_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[14][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[14][7]_i_5_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[15][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[1][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[2][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[3][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[4][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[5][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[6][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[7][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[8][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/RAM[9][7]_i_2_n_0
+INFO: [Opt 31-131] Removed net: CU1/mux1
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][2]_i_4_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][3]_i_6_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][3]_i_7_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][4]_i_4_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][4]_i_5_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][6]_i_4_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][6]_i_5_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][6]_i_6_n_0
+INFO: [Opt 31-131] Removed net: RAM1/RAM[14][7]_i_13_n_0
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT2 CU1/FSM_onehot_current_state[0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/FSM_onehot_current_state[1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/FSM_onehot_current_state[2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/FSM_onehot_current_state[3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/FSM_onehot_current_state[5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[0][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[0][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[10][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[10][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[11][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[11][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[12][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[12][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[13][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[13][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][0]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][1]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][2]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT3 CU1/RAM[14][3]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][3]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT3 CU1/RAM[14][3]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][4]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][5]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][6]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT2 CU1/RAM[14][7]_i_10.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT3 CU1/RAM[14][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[14][7]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT3 CU1/RAM[14][7]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[14][7]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/RAM[14][7]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/RAM[14][7]_i_8.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/RAM[14][7]_i_9.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[15][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[15][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[1][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[1][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[2][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[2][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[3][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[3][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[4][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[4][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[5][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[5][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[6][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[6][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[7][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[7][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[8][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[8][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][0]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][1]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][2]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][3]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][4]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][5]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][6]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 CU1/RAM[9][7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT4 CU1/RAM[9][7]_i_2.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT3 CU1/out_port1[7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 CU1/out_port1[7]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT2 CU1/out_port2[7]_i_1.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT2 RAM1/RAM[14][0]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][1]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][2]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT2 RAM1/RAM[14][2]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][3]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][3]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][3]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][4]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT3 RAM1/RAM[14][4]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT3 RAM1/RAM[14][4]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][5]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][6]_i_3.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 RAM1/RAM[14][6]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT5 RAM1/RAM[14][6]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT2 RAM1/RAM[14][6]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][7]_i_11.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/RAM[14][7]_i_12.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT2 RAM1/RAM[14][7]_i_13.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[0]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[0]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[0]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[0]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[1]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[1]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[1]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[1]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[2]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[2]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[2]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[2]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[3]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[3]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[3]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[3]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[4]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[4]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[4]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[4]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[5]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[5]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[5]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[5]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[6]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[6]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[6]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[6]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[7]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[7]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[7]_i_8.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port1[7]_i_9.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[0]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[0]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[0]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[0]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[1]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[1]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[1]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[1]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[2]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[2]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[2]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[2]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[3]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[3]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[3]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[3]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[4]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[4]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[4]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[4]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[5]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[5]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[5]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[5]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[6]_i_4.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[6]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[6]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[6]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[7]_i_5.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[7]_i_6.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[7]_i_7.
+INFO: [Opt 31-54] Cell has no loads and is removed: LUT6 RAM1/out_port2[7]_i_8.
+INFO: [Opt 31-442] LUT Reduction optimized 0 LUTs
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 8 Resynthesis | Checksum: 12ab8f3d8
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 3658.648 ; gain = 2021.051
+INFO: [Opt 31-389] Phase Resynthesis created 251 cells and removed 256 cells
+
+Phase 9 Post Processing Netlist
+Phase 9 Post Processing Netlist | Checksum: 12ab8f3d8
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 3658.648 ; gain = 2021.051
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3658.648 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: f7371240
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 3658.648 ; gain = 2021.051
+
+Starting Power Optimization Task
+Begin power optimizations | Checksum: f7371240
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-50] Optimizing power for module Computational_storage ...
+INFO: [Pwropt 34-167] No BRAM present in this design. Skipping BRAM power optimization.
+End power optimizations | Checksum: f7371240
+Power optimization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3658.648 ; gain = 0.000
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 0 bytes
+Ending Power Optimization Task | Checksum: f7371240
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3658.648 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: f7371240
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3658.648 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+609 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:34 . Memory (MB): peak = 3658.648 ; gain = 2128.195
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Computational_storage_drc_opted.rpt -pb Computational_storage_drc_opted.pb -rpx Computational_storage_drc_opted.rpx
+Command: report_drc -file Computational_storage_drc_opted.rpt -pb Computational_storage_drc_opted.pb -rpx Computational_storage_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design -directive ExtraTimingOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'ExtraTimingOpt' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 353818ec
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 3782.230 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1692c2664
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 173115c54
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 173115c54
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 173115c54
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 18028d7fd
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1eb0909bd
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 185f0aae4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 185f0aae4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1f9b44b82
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 186710b93
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 186710b93
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.5 Small Shape Clustering
+Phase 3.5 Small Shape Clustering | Checksum: 24cf79d0e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.6 DP Optimization
+Phase 3.6 DP Optimization | Checksum: 1725ab1a3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.7 Flow Legalize Slice Clusters
+Phase 3.7 Flow Legalize Slice Clusters | Checksum: 1e59e23a3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.8 Slice Area Swap
+Phase 3.8 Slice Area Swap | Checksum: 262b7d847
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.9 Commit Slice Clusters
+Phase 3.9 Commit Slice Clusters | Checksum: 1d1cb0d9d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.10 Re-assign LUT pins
+Phase 3.10 Re-assign LUT pins | Checksum: 1a997b86c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 3.11 Pipeline Register Optimization
+Phase 3.11 Pipeline Register Optimization | Checksum: 1a997b86c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1a997b86c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1a3d36957
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1a3d36957
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.956. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 164da51db
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 164da51db
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 164da51db
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 19f537885
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3782.230 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 13c42c3f9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13c42c3f9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Ending Placer Task | Checksum: 11fa28cfe
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3782.230 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+636 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 3782.230 ; gain = 49.207
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 3782.230 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file Computational_storage_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 3782.230 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Computational_storage_utilization_placed.rpt -pb Computational_storage_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 3782.230 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Computational_storage_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3782.230 ; gain = 0.000
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+646 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 3782.230 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_physopt.dcp' has been generated.
+Command: route_design -directive NoTimingRelaxation
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'NoTimingRelaxation'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: aff14d68 ConstDB: 0 ShapeSum: 353818ec RouteDB: 3a7926aa
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 15497bd7d
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:01:30 . Memory (MB): peak = 3877.180 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 38ca2f04 NumContArr: bcf7733 Constraints: f49ff61d Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 139399c54
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:31 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 139399c54
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:31 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 139399c54
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:31 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 2a1301719
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:01:34 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 266e2d1c3
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:01:35 . Memory (MB): peak = 3877.180 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.090  | TNS=0.000  | WHS=0.034  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 1cf596a03
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:01:35 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1e9318e29
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:36 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 61
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.370  | TNS=0.000  | WHS=0.043  | THS=0.000  |
+
+Phase 4.1 Global Iteration 0 | Checksum: 275110c3e
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 4.2 Additional Iteration for Hold
+Phase 4.2 Additional Iteration for Hold | Checksum: 1feed4fcb
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 1feed4fcb
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1feed4fcb
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1feed4fcb
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 1feed4fcb
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 215906365
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.370  | TNS=0.000  | WHS=0.043  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 215906365
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 215906365
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:37 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.015075 %
+  Global Horizontal Routing Utilization  = 0.0147197 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 295e7f597
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:38 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 295e7f597
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:38 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 295e7f597
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:38 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 10 Route finalize
+Phase 10 Route finalize | Checksum: 295e7f597
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:38 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Phase 11 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=5.384  | TNS=0.000  | WHS=0.043  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+Phase 11 Post Router Timing | Checksum: 275e014ff
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:01:38 . Memory (MB): peak = 3877.180 ; gain = 0.000
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:01:38 . Memory (MB): peak = 3877.180 ; gain = 0.000
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+661 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:43 . Memory (MB): peak = 3877.180 ; gain = 94.949
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 3877.180 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Computational_storage_drc_routed.rpt -pb Computational_storage_drc_routed.pb -rpx Computational_storage_drc_routed.rpx
+Command: report_drc -file Computational_storage_drc_routed.rpt -pb Computational_storage_drc_routed.pb -rpx Computational_storage_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3914.902 ; gain = 37.723
+INFO: [runtcl-4] Executing : report_methodology -file Computational_storage_methodology_drc_routed.rpt -pb Computational_storage_methodology_drc_routed.pb -rpx Computational_storage_methodology_drc_routed.rpx
+Command: report_methodology -file Computational_storage_methodology_drc_routed.rpt -pb Computational_storage_methodology_drc_routed.pb -rpx Computational_storage_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file Computational_storage_power_routed.rpt -pb Computational_storage_power_summary_routed.pb -rpx Computational_storage_power_routed.rpx
+Command: report_power -file Computational_storage_power_routed.rpt -pb Computational_storage_power_summary_routed.pb -rpx Computational_storage_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+673 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file Computational_storage_route_status.rpt -pb Computational_storage_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file Computational_storage_timing_summary_routed.rpt -pb Computational_storage_timing_summary_routed.pb -rpx Computational_storage_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Computational_storage_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file Computational_storage_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3914.902 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Computational_storage_bus_skew_routed.rpt -pb Computational_storage_bus_skew_routed.pb -rpx Computational_storage_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed)
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+689 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.179 . Memory (MB): peak = 3914.902 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/impl_1/Computational_storage_postroute_physopt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -warn_on_violation -file Computational_storage_timing_summary_postroute_physopted.rpt -pb Computational_storage_timing_summary_postroute_physopted.pb -rpx Computational_storage_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Computational_storage_bus_skew_postroute_physopted.rpt -pb Computational_storage_bus_skew_postroute_physopted.pb -rpx Computational_storage_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 22:04:36 2024...

@@ -1,0 +1,372 @@
+
+*** Running vivado
+    with args -log Computational_storage.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Computational_storage.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Computational_storage.tcl -notrace
+Command: synth_design -top Computational_storage -part xczu7ev-ffvc1156-2-e -fanout_limit 100 -retiming -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -cascade_dsp tree
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14724 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 435.312 ; gain = 95.332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Computational_storage' [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Computational_storage.sv:8]
+	Parameter MEM_WIDTH bound to: 8 - type: integer 
+	Parameter MEM_DEPTH bound to: 16 - type: integer 
+	Parameter NO_OPERATIONS bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Dual_port_RAM' [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Dual_port_RAM.sv:6]
+	Parameter MEM_WIDTH bound to: 8 - type: integer 
+	Parameter MEM_DEPTH bound to: 16 - type: integer 
+WARNING: [Synth 8-5788] Register RAM_reg in module Dual_port_RAM is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'RAM_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "RAM_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'Dual_port_RAM' (1#1) [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Dual_port_RAM.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'Controller' [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Controller.sv:6]
+	Parameter RST_STATE bound to: 0 - type: integer 
+	Parameter RD_MEM_CMD_STATE bound to: 1 - type: integer 
+	Parameter WR_MEM_CMD_STATE bound to: 2 - type: integer 
+	Parameter ADD_CMD1_STATE bound to: 3 - type: integer 
+	Parameter ADD_CMD2_STATE bound to: 4 - type: integer 
+	Parameter SUB_CMD1_STATE bound to: 5 - type: integer 
+	Parameter SUB_CMD2_STATE bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Controller' (2#1) [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Controller.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'Arthmetic_unit' [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Arithmetic_unit.sv:6]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Arthmetic_unit' (3#1) [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Arithmetic_unit.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'Computational_storage' (4#1) [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/sources_1/imports/Design/Computational_storage.sv:8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 489.895 ; gain = 149.914
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 489.895 ; gain = 149.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 489.895 ; gain = 149.914
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/constrs_1/imports/new/timing.xdc]
+Finished Parsing XDC File [F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.srcs/constrs_1/imports/new/timing.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1610.113 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1610.113 ; gain = 1270.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1610.113 ; gain = 1270.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1610.113 ; gain = 1270.133
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Controller'
+INFO: [Synth 8-5544] ROM "arith_op" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mux2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WR_en1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RD_en2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RD_en1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "DQ_out_enable" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               RST_STATE |                          0000001 |                              000
+        WR_MEM_CMD_STATE |                          0000010 |                              010
+        RD_MEM_CMD_STATE |                          0000100 |                              001
+          ADD_CMD1_STATE |                          0001000 |                              011
+          ADD_CMD2_STATE |                          0010000 |                              100
+          SUB_CMD1_STATE |                          0100000 |                              101
+          SUB_CMD2_STATE |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'Controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1610.113 ; gain = 1270.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 18    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 36    
+	   7 Input      7 Bit        Muxes := 1     
+	   5 Input      7 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Computational_storage 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Dual_port_RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 18    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 34    
+Module Controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      7 Bit        Muxes := 1     
+	   5 Input      7 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 5     
+Module Arthmetic_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1610.113 ; gain = 1270.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 2021.559 ; gain = 1681.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.379 ; gain = 1703.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `Computational_storage`
+	Effective logic levels on critical path before retiming is: 6
+	Total number of crtical paths = 96
+
+	Optimizing at the module level
+	Cannot find a feasible solution:
+		Effective logic levels from RAM1/out_port1_reg[0](fixed:INPUT) to RAM1/RAM_reg[15][7](fixed:INPUT) is: 6
+		Effective logic levels found across for latency (=1) is: 6
+	Optimizing locally to improve critical paths(may not reduce worst delay)
+
+	Effective logic levels on critical path after retiming is: 6
+	Total number of crtical paths = 96
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `Computational_storage' done
+
+
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     2|
+|3     |LUT2  |     8|
+|4     |LUT3  |     7|
+|5     |LUT4  |    16|
+|6     |LUT5  |    10|
+|7     |LUT6  |   210|
+|8     |MUXF7 |    33|
+|9     |MUXF8 |    16|
+|10    |FDCE  |    22|
+|11    |FDPE  |     1|
+|12    |FDRE  |   128|
+|13    |IBUF  |    16|
+|14    |IOBUF |     8|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   478|
+|2     |  CU1    |Controller    |   175|
+|3     |  RAM1   |Dual_port_RAM |   276|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2043.711 ; gain = 583.512
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 2043.711 ; gain = 1703.730
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 74 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 25 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 16 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 2071.133 ; gain = 1742.945
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/Aloshka/Siemens internship/Hardware verification engineer project/Project/FPGA synthesis/Computational_storage_prototyping/Computational_storage_prototyping.runs/synth_1/Computational_storage.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Computational_storage_utilization_synth.rpt -pb Computational_storage_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 2071.133 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 22:00:38 2024...
